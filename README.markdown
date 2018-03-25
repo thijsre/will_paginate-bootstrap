@@ -2,9 +2,7 @@
 
 ---
 
-__No longer maintained__
-
-I'm no longer using Bootstrap with Rails, so unfortunately am no longer accepting pull requests or maintaining this library. Feel free to fork this repository in order to publish your changes, or get in touch with me if you'd like to take over maintenance of the gem.
+Based on the great work done by Nick Dainty
 
 ---
 
@@ -20,16 +18,17 @@ Just like will_paginate, Rails and Sinatra are supported.
 
   * `gem install will_paginate-bootstrap`, *or*
   * For projects using Bundler, add `gem 'will_paginate-bootstrap'` to your `Gemfile` (and then run `bundle install`).
+  * You'll need to restart your server before you can make any use of this.
 
 ## Usage
 
 ### Rails
 
-  1. Load the Bootstrap CSS in your template.
-  2. In your view, use the `renderer: BootstrapPagination::Rails` option with the `will_paginate` helper, for example:
+  1. Load the Bootstrap CSS in your template (`assets/stylesheets`). (If you already installed twitter-bootstrap-rails, this should be done for you).
+  2. In your view, use the code below (`renderer: BootstrapPagination::Rails` option set by default).
 
 ```ruby
-<%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+<%= will_paginate @collection %>
 ```
 
 ### Sinatra
